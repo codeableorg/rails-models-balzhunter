@@ -1,0 +1,29 @@
+version: "3"
+services:
+  db:
+    image: postgres:alpine
+    volumes:
+      - ddl_db:/var/lib/postgresql/data
+    ports:
+      - 54320:5432
+    environment:
+      POSTGRES_PASSWORD: codeable
+  client:
+    image: codeableorg/ror:latest
+    command: "bash -c 'while true; do sleep 1; done'"
+    volumes:
+      - .:/app
+      - ssh:/root/.ssh
+      - ./.container/bundle:/usr/local/bundle
+    ports:
+      - 3000:3000
+    environment:
+      GIT_USER_NAME: vampaynani
+      GIT_USER_EMAIL: vampay@digitaldealers.mx
+      PGPASSWORD: codeable
+    depends_on:
+      - db
+volumes:
+  ddl_db:
+  ssh:
+    external: true
