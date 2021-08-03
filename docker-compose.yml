@@ -18,8 +18,8 @@ services:
     ports:
       - 3000:3000
     environment:
-      GIT_USER_NAME: vampaynani
-      GIT_USER_EMAIL: vampay@digitaldealers.mx
+      GIT_USER_NAME: balzhunter
+      GIT_USER_EMAIL: balvirp1@gmail.com
       PGPASSWORD: codeable
     depends_on:
       - db

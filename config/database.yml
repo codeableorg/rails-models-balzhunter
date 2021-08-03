@@ -17,7 +17,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: rails-models_db_1
+  host: active-record-w8_db_1
   user: postgres
   password: <%= ENV['PGPASSWORD'] %>
   # For details on connection pooling, see Rails configuration guide
