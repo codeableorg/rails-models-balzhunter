@@ -1,4 +1,4 @@
-# Rails models - console tasks
+# Rails migrations - console tasks
 
 ## Task 1: Creating the Critic model
 
