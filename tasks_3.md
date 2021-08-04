@@ -9,7 +9,7 @@ critics
   created_at: timestamp
   updated_at: timestamp
 ```
-rails generate model Game body:string game:references
+rails generate model Critic body:string game:references
 rails db:migrate
 ```
 
