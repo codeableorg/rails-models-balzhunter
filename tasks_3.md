@@ -18,7 +18,7 @@ rails db:migrate
 1. We need to create the table and the model to manage users in the app. Use generate model to complete this task.
 
 ```
-rails generate model User username:string email:string birth_date:date first_name:string last_name:string
+rails generate model User username:string:uniq email:string:uniq birth_date:date first_name:string last_name:string
 rails db:migrate
 ```
 
