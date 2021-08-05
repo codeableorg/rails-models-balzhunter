@@ -32,7 +32,7 @@ rails generate migration AddTitleToCritic title:string
 ```
 2. Add a reference to the users table.
 ```
-rails generate migration AddUserRefToCritic user:references
+rails generate migration AddUserToCritic user:references
 ```
 
 ## Task 4: Update the column type on the critics table
