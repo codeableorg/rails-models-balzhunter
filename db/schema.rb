@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2021_08_04_211357) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "title"
     t.bigint "user_id", null: false
-    t.text "body"
+    t.string "body"
     t.index ["game_id"], name: "index_critics_on_game_id"
     t.index ["user_id"], name: "index_critics_on_user_id"
   end

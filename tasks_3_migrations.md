@@ -32,7 +32,7 @@ rails generate migration AddTitleToCritic title:string
 ```
 2. Add a reference to the users table.
 ```
-rails generate migration AddUserRefToCritic user:references
+rails generate migration AddUserToCritic user:references
 ```
 
 ## Task 4: Update the column type on the critics table
@@ -111,9 +111,4 @@ At this moment, the critics table should have a column body with type string.
 ```
 bin/rails db:migrate
 ```
-== 20210804211357 ChangeBodyFromStringToTextOnCritics: migrating ==============
--- remove_column(:critics, :body, :string)
-   -> 0.0254s
--- add_column(:critics, :body, :text)
-   -> 0.0130s
-== 20210804211357 ChangeBodyFromStringToTextOnCritics: migrated (0.0391s) =====
+
