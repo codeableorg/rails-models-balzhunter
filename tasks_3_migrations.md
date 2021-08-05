@@ -54,11 +54,7 @@ rails generate migration ChangeBodyFromStringToTextOnCritics
 bin/rails db:rollback
 ```
 == 20210804211357 ChangeBodyFromStringToTextOnCritics: reverting ==============
--- remove_column(:critics, :body, :text)
-   -> 0.0370s
--- add_column(:critics, :body, :string)
-   -> 0.0143s
-== 20210804211357 ChangeBodyFromStringToTextOnCritics: reverted (0.0632s) =====
+== 20210804211357 ChangeBodyFromStringToTextOnCritics: reverted (0.0109s) =====
 
 2. From that point, rollback the previous 3 migrations (using STEP)
 ```
@@ -111,4 +107,5 @@ At this moment, the critics table should have a column body with type string.
 ```
 bin/rails db:migrate
 ```
-
+== 20210804211357 ChangeBodyFromStringToTextOnCritics: migrating ==============
+== 20210804211357 ChangeBodyFromStringToTextOnCritics: migrated (0.0000s) =====
